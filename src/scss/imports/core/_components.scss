@@ -1,0 +1,111 @@
+body {
+    background-color: #f4f4f4;
+}
+
+//Tags
+.tags {
+    .container {
+        .tags-text {
+            display: flex;
+            justify-content: center;
+            .tag {
+                padding: 20px 20px;
+                cursor: pointer;
+                font-size: 12px;
+            }
+            .active {
+                font-weight: bold;
+            }
+        }
+        .post {
+            display: none;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            &__item {
+                text-align: center;
+                margin-bottom: 70px;
+                &-img {
+                    img {
+                        cursor: pointer;
+                    }
+                }
+                &-title {
+                    margin: 25px 0 10px 0;
+                    a {
+                        font-family: pr;
+                        font-size: 12px;
+                        font-weight: bold;
+                        line-height: 30px;
+                        color: $black-cl;
+                        text-decoration: none;
+                    }
+                    &::after {
+                        content: "";
+                        display: block;
+                        position: relative;
+                        height: 3px;
+                        border-right: 16px solid $lineTag-cl;
+                        left: -47%;
+                    }
+                }
+                &-des {
+                    font-size: 12px;
+                    line-height: 20px;
+                }
+            }
+        }
+        .active {
+            display: flex;
+        }
+
+        .allworks {
+            text-align: center;
+            //background-image: url(../../../img/arrow-allworks.png);
+            background-repeat: no-repeat;
+            font-family: ps;
+            font-size: 12px;
+            font-weight: bold;
+            line-height: 30px;
+            background-origin: content-box;
+            background-position: center 40px;
+            padding-bottom: 20px;
+            cursor: pointer;
+            a {
+                text-decoration: none;
+                color: $black-cl;
+                padding: 30px 20px;
+            }
+        }
+    }
+
+    @include xs {
+        .container {
+            .tags-text {
+                display: none;
+            }
+            .post {
+                flex-direction: column;
+                max-width: 100%;
+                &__item {
+                    &-img {
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.line {
+    img {
+        width: 100%;
+    }
+}
+
+@include xs {
+    .line {
+        margin-top: -80px;
+        margin-bottom: -30px;
+    }
+}

@@ -1,0 +1,184 @@
+.studio {
+    .container {
+        padding: 40px 0;
+        .back {
+            display: flex;
+            float: right;
+            font-size: 12px;
+            text-align: center;
+            cursor: pointer;
+            img {
+                padding-left: 20px;
+            }
+            padding-bottom: 20px;
+        }
+        .img {
+            img {
+                width: 100%;
+            }
+        }
+
+        .studio-info {
+            font-size: 12px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: -4px;
+            img {
+                padding-left: 20px;
+            }
+            .option {
+                margin-top: -50px;
+                display: flex;
+                justify-content: space-around;
+                margin-right: -20px;
+                div {
+                    display: flex;
+                    align-items: center;
+                    padding: 0 20px;
+                }
+                img {
+                    cursor: pointer;
+                }
+                .prev-next {
+                    display: flex;
+                    .prev {
+                        img {
+                            padding-left: 0;
+                            padding-right: 20px;
+                        }
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            display: block;
+                            height: 15px;
+                            border-left: 1px solid $black-cl;
+                            right: 335px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.info-price {
+    .container {
+        padding: 0 15px;
+        .title {
+            font-size: 14px;
+            line-height: 20px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            strong {
+                font-weight: bold;
+            }
+        }
+        h2 {
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+            .pricing {
+                .prices {
+                    .price {
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 10px 10px 10px 40px;
+                        border: 1px solid $black-cl;
+                    }
+                }
+            }
+
+            .pb {
+                width: calc(90% / 2);
+                img {
+                    padding-top: 80px;
+                }
+            }
+        }
+
+        .below {
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            .pb {
+                width: calc(90% / 2);
+            }
+            .floor-info {
+                .title {
+                    padding-top: px;
+                }
+            }
+        }
+    }
+}
+
+.book {
+    .container {
+        .box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .title {
+                padding-bottom: 20px;
+            }
+        }
+    }
+}
+
+@include xs {
+    .studio {
+        .container {
+            .studio-info {
+                .img {
+                    img {
+                        padding-left: 0;
+                    }
+                }
+                .option {
+                    display: none;
+                }
+            }
+            .line {
+                display: none;
+            }
+        }
+    }
+
+    .info-price {
+        .container {
+            padding: 0 15px;
+            display: block;
+            .top {
+                display: block;
+                .pb {
+                    width: 100%;
+                }
+                .floor {
+                    padding-top: 30px;
+                    img {
+                        padding-top: 30px;
+                        width: 100%;
+                    }
+                }
+            }
+
+            .below {
+                display: block;
+                .pb {
+                    width: 100%;
+                }
+                .floor-info {
+                    margin-top: -25px;
+                }
+            }
+        }
+    }
+
+    .box {
+        margin-top: -20px;
+    }
+}

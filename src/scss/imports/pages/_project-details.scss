@@ -1,0 +1,108 @@
+.project {
+    .container {
+        .top {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            h2 {
+                font-size: 14px;
+                line-height: 22px;
+                font-weight: lighter;
+                letter-spacing: 2px;
+            }
+            .opt {
+                display: flex;
+                div {
+                    display: flex;
+                    align-items: center;
+                    font-size: 12px;
+                    line-height: 30px;
+                    img {
+                        padding-left: 20px;
+                        cursor: pointer;
+                    }
+                }
+                .back {
+                    padding-left: 35px;
+                }
+            }
+        }
+        .img {
+            img {
+                width: 100%;
+            }
+        }
+
+        @include xs {
+            .top {
+                h2 {
+                    align-items: center;
+                    display: flex;
+                }
+                .opt {
+                    .fullscr {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.info {
+    margin-top: -45px;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        h3 {
+            line-height: 22px;
+            font-weight: lighter;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 2px;
+            padding-bottom: 20px;
+        }
+        > div {
+            width: calc(100% / 3);
+        }
+        .title {
+            font-size: 11px;
+            line-height: 22px;
+        }
+        .client {
+            text-align: center;
+            .title {
+                margin-left: -30px;
+            }
+        }
+    }
+
+    @include xs {
+        padding: 0 15px;
+        .container {
+            flex-direction: column;
+            > div {
+                width: 100%;
+            }
+            .client {
+                order: -1;
+                text-align: left;
+                .title {
+                    margin: 0 0;
+                }
+            }
+            h3 {
+                padding-bottom: 5px;
+            }
+            .if {
+                margin-bottom: 25px;
+            }
+        }
+    }
+}
+
+@include xs {
+    .line {
+        margin-top: -80px;
+    }
+}

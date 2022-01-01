@@ -1,0 +1,80 @@
+.contact-page {
+    background-image: url(../../../img/cafe-box.png);
+    color: $white-cl;
+    background-repeat: no-repeat;
+    margin-bottom: -40px;
+    background-size: cover;
+    .container {
+        text-align: center;
+        padding: 47px 0;
+        .img {
+            padding-bottom: 30px;
+        }
+        .info-contact {
+            display: flex;
+            justify-content: center;
+            font-size: 12px;
+            line-height: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            .left {
+                text-align: right;
+                padding-right: 25px;
+            }
+            .right {
+                text-align: left;
+                padding-left: 25px;
+            }
+        }
+    }
+}
+
+.contact-mobile {
+    display: none;
+}
+
+.ft {
+    .container {
+        .below {
+            &__top {
+                width: auto;
+                .info {
+                    .below__info {
+                        width: auto;
+                        .contact {
+                            width: auto;
+                            div {
+                                width: 60%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include xs {
+    .contact-page {
+        display: none;
+    }
+    .contact-mobile {
+        display: block;
+        img {
+            width: 100%;
+        }
+    }
+
+    .ft {
+        margin-top: -83px;
+        .container {
+            .below {
+                &__top {
+                    .info {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

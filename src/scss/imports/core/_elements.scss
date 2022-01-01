@@ -1,0 +1,26 @@
+// css button, title, icon, elements...
+img {
+    max-width: 100%;
+}
+
+.box {
+    &-btn {
+        background-color: $book-cl;
+        width: max-content;
+        padding: 15px 10px;
+        text-align: center;
+        border-radius: 10px;
+        .book {
+            font-size: 24px;
+        }
+        .now {
+            font-size: 27px;
+        }
+        a {
+            font-weight: bold;
+            text-decoration: none;
+            color: $text-book-cl;
+            line-height: 30px;
+        }
+    }
+}

@@ -1,0 +1,182 @@
+.rental {
+    .container {
+        padding: 0 0;
+        display: flex;
+
+        .rental-studio {
+            .mobile {
+                display: none;
+            }
+        }
+
+        .details {
+            padding: 70px 0 0 70px;
+            h2 {
+                font-size: 28px;
+                line-height: 30px;
+                font-weight: bold;
+            }
+            .title {
+                font-size: 12px;
+                line-height: 66px;
+            }
+            textarea {
+                background-color: $web-cl;
+            }
+
+            /* Company */
+            .company {
+                padding-bottom: 50px;
+                display: flex;
+                justify-content: space-between;
+
+                input {
+                    border: none;
+                    border-bottom: 1px solid black;
+                    background-color: $web-cl;
+                    width: 100%;
+                    line-height: 20px;
+                }
+                &-right {
+                    padding-top: 30px;
+                    margin-left: 90px;
+                    textarea {
+                        margin-top: 17px;
+                    }
+                }
+            }
+
+            /* Booking */
+            .booking {
+                input {
+                    background-color: $web-cl;
+                    width: 100%;
+                    line-height: 30px;
+                    border: 1px solid black;
+                }
+                &-studio {
+                    .items {
+                        display: flex;
+                        .item {
+                            padding: 10px 10px;
+                            background-color: $black-cl;
+                            border: 1px solid $black-cl;
+                            margin-right: 20px;
+                            color: $white-cl;
+                            font-size: 20px;
+                            font-weight: bold;
+                            cursor: pointer;
+                        }
+                        .active {
+                            background-color: $footer-cl;
+                            color: $black-cl;
+                        }
+                    }
+                }
+
+                &-input {
+                    .requie {
+                        display: flex;
+                        justify-content: space-between;
+                        .--left {
+                            input {
+                                margin-top: 65px;
+                            }
+                            .note {
+                                position: absolute;
+                                top: 41.5%;
+                            }
+                        }
+                    }
+
+                    .duration {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                }
+            }
+
+            .box {
+                padding-top: 80px;
+                display: flex;
+                &-content {
+                    padding-left: 20px;
+                    font-size: 12px;
+                    line-height: 24px;
+                    strong {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include xs {
+    .rental {
+        .container {
+            display: block;
+            .rental-studio {
+                display: flex;
+                justify-content: center;
+                .nm {
+                    display: none;
+                }
+                .mobile {
+                    display: block;
+                    padding: 30px 10px;
+                }
+            }
+
+            .details {
+                padding: 0 20px;
+                .company {
+                    display: block;
+                    &-right {
+                        padding-top: 0;
+                        margin-left: 0;
+                        textarea {
+                            margin-top: 0;
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .booking {
+                    textarea {
+                        width: 100%;
+                    }
+                    input {
+                        width: 100%;
+                    }
+                    &-input {
+                        .requie {
+                            display: block;
+                            .note {
+                                display: none;
+                            }
+                            .--left {
+                                display: flex;
+                                flex-flow: column;
+                                input {
+                                    margin-top: 40px;
+                                    order: -1;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .box {
+                    padding-top: 40px;
+                }
+            }
+        }
+    }
+
+    @include xs {
+        .rental {
+            padding-bottom: 80px;
+        }
+    }
+}
